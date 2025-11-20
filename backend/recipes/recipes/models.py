@@ -86,7 +86,7 @@ class Ingredient(models.Model):
         Recipe, on_delete=models.CASCADE, related_name="ingredients"
     )
     name = models.CharField(max_length=100)
-    quantity = models.DecimalField(max_digits=4, decimal_places=2)
+    quantity = models.DecimalField(max_digits=5, decimal_places=2)
     unit_of_measurement = models.CharField(
         choices=UNITS_OF_MEASUREMENT,
         max_length=15,
